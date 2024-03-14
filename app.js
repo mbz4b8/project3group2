@@ -1,5 +1,5 @@
 // Read in the Spotify SQLite data from tables_json.json file
-const Spotifydata = 'tablesz_json.json';
+const Spotifydata = 'tables_data.json';
 
 // Fetch data and log to console
 d3.json(Spotifydata)
