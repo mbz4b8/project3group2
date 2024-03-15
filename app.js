@@ -2,8 +2,11 @@
 const Spotifydata = 'tables_data.json';
 
 // Fetch data and log to console
-d3.json(Spotifydata)
-  .then(function(data) {
+fetch(Spotifydata)
+  .then(response => response.json())
+  .then(data => {
     console.log(data);
+  })
+  .catch(error => {
+    console.error('Error fetching data:', error);
   });
-    
