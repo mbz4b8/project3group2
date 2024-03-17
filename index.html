@@ -4,11 +4,7 @@
     <meta charset = "UTF-8">
     <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
     <title> Spotify Wrapped Project </title>
-     <!-- Include Plotly library from CDN -->
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <link href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel = "stylesheet"></link>
-    <link rel="stylesheet" href="app.js"> 
-    <link rel="stylesheet" href="tables_data.json"> 
     <style>
         body {
             background-color: #191414;
@@ -32,7 +28,7 @@
         }
         .header-left {
             text-align: left;
-            padding-left: 100px;
+            padding-left: 200px;
         }
         .card {
             max-width: 200px;
@@ -50,14 +46,14 @@
 <body>
     <header>
         <h1>Spotify Wrapped Project</h1> 
-        <img src="Spotify_Icon_RGB_Green.png" alt="Icon" class = "Icon" width="40" height="40">
+        <img src="C:\Users\hilar\Downloads\spotify-icons-logos\spotify-icons-logos\icons\01_RGB\02_PNG\Spotify_Icon_RGB_Green.png" alt="Icon" class = "Icon" width="40" height="40">
     </header>
     <br></br>
     <div class = "container">
         <div class = "row">
             <div class = "col-12 button-container">
                 <div class = "dropdown">
-                    <button type ="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">My Time Spent on Spotify</button>
+                    <button type ="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">My Top Artists</button>
                     <ul class = "dropdown-menu">
                         <li><a class="dropdown-item" href="#">Last Four Weeks</a></li>
                         <li><a class="dropdown-item" href="#">Last 6 Months</a></li>
@@ -65,268 +61,41 @@
                     </ul>
                 </div> 
                 <button type="button" class="btn btn-dark">
-                    <a href="#" style="color: #FFFFFF; text-decoration: none;">My Top Artists</a></button>
+                    <a href="#" style="color: #FFFFFF; text-decoration: none;">My Related Artists</a></button>
                 <button type="button" class="btn btn-dark">
                     <a href="#" style="color: #FFFFFF; text-decoration: none;">My Favorite Genres</a></button>    
             </div>
         </div>
     </div>
-    <br></br>
-    <br></br>
- <div id="bar"></div>
-    <br></br>
-    <br></br>
-    <header>
-        <h2>Click on a Card Below to Explore Similar Artists</h2>
-        <h3>Based on Your Top 5 Artists</h3>
-        <h4>Scroll Down For Responsive Exploratory Visualization</h4>
-    </header>
-    <br></br>
-    <header class = "header-left">
-        <h2>Taylor Swift</h2>
-    </header>
-    <br></br>
-    <div class = "card-group">
-        <div class = "card">
-            <img src = "https://i.scdn.co/image/ab6761610000f178c3c753851496854e29abff7a" class = "card-img-top" alt = "#">
-            <div class = "card-body">
-                <h5 class = "card-title">Selena Gomez</h5>
-                <a href = "https://open.spotify.com/artist/0C8ZW7ezQVs4URX5aX7Kqx" class = "btn btn-dark">Artist's Page</a>
+    
+    <!-- Top Artists Dropdown Button -->
+    <div class="container mt-5 text-center">
+        <h1>Top Artists Dropdown</h1>
+
+        <!-- Dropdown button using Bootstrap -->
+        <div class="form-group">
+            <label for="topArtist">Select one of your top artists to see related artists:</label>
+            <div class="col-sm-3">
+            <select class="form-control" id="topArtist">
+                <!-- Dropdown options will be populated dynamically -->
+            </select>
             </div>
         </div>
-        <div class = "card">
-            <img src = "https://i.scdn.co/image/ab6761610000f178e03a98785f3658f0b6461ec4" class = "card-img-top" alt = "#">
-            <div class = "card-body">
-                <h5 class = "card-title">Olivia Rodrigo</h5>
-                <a href = "https://open.spotify.com/artist/1McMsnEElThX1knmY4oliG" class = "btn btn-dark">Artist's Page</a>
-            </div>
-        </div>
-        <div class = "card">
-            <img src = "https://i.scdn.co/image/ab6761610000f178dc9dcb7e4a97b4552e1224d6" class = "card-img-top" alt = "#">
-            <div class = "card-body">
-                <h5 class = "card-title">Katy Perry</h5>
-                <a href = "https://open.spotify.com/artist/6jJ0s89eD6GaHleKKya26X" class = "btn btn-dark">Artist's Page</a>
-            </div>
-        </div>
-        <div class = "card">
-            <img src = "https://i.scdn.co/image/ab6761610000f17840b5c07ab77b6b1a9075fdc0" class = "card-img-top" alt = "#">
-            <div class = "card-body">
-                <h5 class = "card-title">Ariana Grande</h5>
-                <a href = "https://open.spotify.com/artist/66CXWjxzNUsdJxJ2JdwvnR" class = "btn btn-dark">Artist's Page</a>
-            </div>
-        </div>
-        <div class = "card">
-            <img src = "https://i.scdn.co/image/ab6761610000f178f7db7c8ede90a019c54590bb" class = "card-img-top" alt = "#">
-            <div class = "card-body">
-                <h5 class = "card-title">Harry Styles</h5>
-                <a href = "https://open.spotify.com/artist/6KImCVD70vtIoJWnq6nGn3" class = "btn btn-dark">Artist's Page</a>
-            </div>
+         <!-- Display filtered data -->
+         <div id="filteredData">
+            <!-- Filtered data will be displayed here -->
         </div>
     </div>
-    <br></br>
-    <br></br>
-    <br></br>
-    <br></br>
-    <header class = "header-left">
-        <h2>John Mayer</h2>
-    </header>
-    <br></br>
-    <div class = "card-group">
-        <div class = "card">
-            <img src = "https://i.scdn.co/image/ab6761610000f1789555a0b3231117c8cde1fca7" class = "card-img-top" alt = "#">
-            <div class = "card-body">
-                <h5 class = "card-title">Jack Johnson</h5>
-                <a href = "https://open.spotify.com/artist/3GBPw9NK25X1Wt2OUvOwY3" class = "btn btn-dark">Artist's Page</a>
-            </div>
-        </div>
-        <div class = "card">
-            <img src = "https://i.scdn.co/image/ab6761610000f178c3b370fc26c83312db52af14" class = "card-img-top" alt = "#">
-            <div class = "card-body">
-                <h5 class = "card-title">Jason Mraz</h5>
-                <a href = "https://open.spotify.com/artist/4phGZZrJZRo4ElhRtViYdl" class = "btn btn-dark">Artist's Page</a>
-            </div>
-        </div>
-        <div class = "card">
-            <img src = "https://i.scdn.co/image/ab6761610000f178a79c060a14915e9c2e1b4518" class = "card-img-top" alt = "#">
-            <div class = "card-body">
-                <h5 class = "card-title">Gavin DeGraw</h5>
-                <a href = "https://open.spotify.com/artist/5DYAABs8rkY9VhwtENoQCz" class = "btn btn-dark">Artist's Page</a>
-            </div>
-        </div>
-        <div class = "card">
-            <img src = "https://i.scdn.co/image/ab67616d000048512c044b0dec365f990af906ad" class = "card-img-top" alt = "#">
-            <div class = "card-body">
-                <h5 class = "card-title">John Mayer Trio</h5>
-                <a href = "https://open.spotify.com/artist/68xuC1qXRhCUvGd4SSM655" class = "btn btn-dark">Artist's Page</a>
-            </div>
-        </div>
-        <div class = "card">
-            <img src = "https://i.scdn.co/image/ab6761610000f17808635ff0ed30023d2ee764a1" class = "card-img-top" alt = "#">
-            <div class = "card-body">
-                <h5 class = "card-title">Colbie Caillat</h5>
-                <a href = "https://open.spotify.com/artist/6aZyMrc4doVtZyKNilOmwu" class = "btn btn-dark">Artist's Page</a>
-            </div>
-        </div>
-    </div>
-    <br></br>
-    <br></br>
-    <br></br>
-    <br></br>
-    <header class = "header-left">
-        <h2>Morgan Wallen</h2>
-    </header>
-    <br></br>
-    <div class = "card-group">
-        <div class = "card">
-            <img src = "https://i.scdn.co/image/ab6761610000f178ed36422f0f4ab7564fd0a2d6" class = "card-img-top" alt = "#">
-            <div class = "card-body">
-                <h5 class = "card-title">Bailey Zimmerman</h5>
-                <a href = "https://open.spotify.com/artist/3win9vGIxFfBRag9S63wwf" class = "btn btn-dark">Artist's Page</a>
-            </div>
-        </div>
-        <div class = "card">
-            <img src = "https://i.scdn.co/image/ab6761610000f1782d272d590f12c1b594ef7aca" class = "card-img-top" alt = "#">
-            <div class = "card-body">
-                <h5 class = "card-title">HARDY</h5>
-                <a href = "https://open.spotify.com/artist/5QNm7E7RU2m64l6Gliu8Oy" class = "btn btn-dark">Artist's Page</a>
-            </div>
-        </div>
-        <div class = "card">
-            <img src = "https://i.scdn.co/image/ab6761610000f1785db6179b28f7e3654898b279" class = "card-img-top" alt = "#">
-            <div class = "card-body">
-                <h5 class = "card-title">Luke Combs</h5>
-                <a href = "https://open.spotify.com/artist/718COspgdWOnwOFpJHRZHS" class = "btn btn-dark">Artist's Page</a>
-            </div>
-        </div>
-        <div class = "card">
-            <img src = "https://i.scdn.co/image/ab6761610000f1782ed3943e39c47fa8bb10fb53" class = "card-img-top" alt = "#">
-            <div class = "card-body">
-                <h5 class = "card-title">Jordan Davis</h5>
-                <a href = "https://open.spotify.com/artist/77kULmXAQ6vWer7IIHdGzI" class = "btn btn-dark">Artist's Page</a>
-            </div>
-        </div>
-        <div class = "card">
-            <img src = "https://i.scdn.co/image/ab6761610000f1789ab434ef1b8d8aff5fce625d" class = "card-img-top" alt = "#">
-            <div class = "card-body">
-                <h5 class = "card-title">Jon Pardi</h5>
-                <a href = "https://open.spotify.com/artist/4MoAOfV4ROWofLG3a3hhBN" class = "btn btn-dark">Artist's Page</a>
-            </div>
-        </div>
-    </div>
-    <br></br>
-    <br></br>
-    <br></br>
-    <br></br>
-    <header class = "header-left">
-        <h2>Miley Cyrus</h2>
-    </header>
-    <br></br>
-    <div class = "card-group">
-        <div class = "card">
-            <img src = "https://i.scdn.co/image/ab6761610000f1786c851c42d7b31d0ad93d4b94" class = "card-img-top" alt = "#">
-            <div class = "card-body">
-                <h5 class = "card-title">Hannah Montana</h5>
-                <a href = "https://open.spotify.com/artist/7nU4hB040gTmHm45YYMvqc" class = "btn btn-dark">Artist's Page</a>
-            </div>
-        </div>
-        <div class = "card">
-            <img src = "https://i.scdn.co/image/ab6761610000f178cf674ecb51186e6408cd18c0" class = "card-img-top" alt = "#">
-            <div class = "card-body">
-                <h5 class = "card-title">Demi Lovato</h5>
-                <a href = "https://open.spotify.com/artist/6S2OmqARrzebs0tKUEyXyp" class = "btn btn-dark">Artist's Page</a>
-            </div>
-        </div>
-        <div class = "card">
-            <img src = "https://i.scdn.co/image/ab6761610000f1788e32655d5ee8021c812b0f74" class = "card-img-top" alt = "#">
-            <div class = "card-body">
-                <h5 class = "card-title">Kesha</h5>
-                <a href = "https://open.spotify.com/artist/6LqNN22kT3074XbTVUrhzX" class = "btn btn-dark">Artist's Page</a>
-            </div>
-        </div>
-        <div class = "card">
-            <img src = "https://i.scdn.co/image/ab6761610000f1783a49b0a3954e460a8a76ed90" class = "card-img-top" alt = "#">
-            <div class = "card-body">
-                <h5 class = "card-title">Britney Spears</h5>
-                <a href = "https://open.spotify.com/artist/26dSoYclwsYLMAKD3tpOr4" class = "btn btn-dark">Artist's Page</a>
-            </div>
-        </div>
-        <div class = "card">
-            <img src = "https://i.scdn.co/image/ab6761610000f178581efa688945cbb092df1726" class = "card-img-top" alt = "#">
-            <div class = "card-body">
-                <h5 class = "card-title">Avril Lavigne</h5>
-                <a href = "https://open.spotify.com/artist/0p4nmQO2msCgU4IF37Wi3j" class = "btn btn-dark">Artist's Page</a>
-            </div>
-        </div>
-    </div>
-    <br></br>
-    <br></br>
-    <br></br>
-    <br></br>
-    <header class = "header-left">
-        <h2>Third Eye Blind</h2>
-    </header>
-    <br></br>
-    <div class = "card-group">
-        <div class = "card">
-            <img src = "https://i.scdn.co/image/ab6761610000f1784b2f039f936f88e047163c9d" class = "card-img-top" alt = "#">
-            <div class = "card-body">
-                <h5 class = "card-title">Everclear</h5>
-                <a href = "https://open.spotify.com/artist/694QW15WkebjcrWgQHzRYF" class = "btn btn-dark">Artist's Page</a>
-            </div>
-        </div>
-        <div class = "card">
-            <img src = "https://i.scdn.co/image/ab6761610000f178aac60f5863d2df0b1425955a" class = "card-img-top" alt = "#">
-            <div class = "card-body">
-                <h5 class = "card-title">Eve 6</h5>
-                <a href = "https://open.spotify.com/artist/4Eqd24yS5YcxI8b6Xfuwr8" class = "btn btn-dark">Artist's Page</a>
-            </div>
-        </div>
-        <div class = "card">
-            <img src = "https://i.scdn.co/image/ab6761610000f178ff43c5735517a662439d0afe" class = "card-img-top" alt = "#">
-            <div class = "card-body">
-                <h5 class = "card-title">Sugar Ray</h5>
-                <a href = "https://open.spotify.com/artist/4uN3DsfENc7dp0OLO0FEIb" class = "btn btn-dark">Artist's Page</a>
-            </div>
-        </div>
-        <div class = "card">
-            <img src = "https://i.scdn.co/image/ab6761610000f1785c0f1358900eef3ae120f159" class = "card-img-top" alt = "#">
-            <div class = "card-body">
-                <h5 class = "card-title">Gin Blossoms</h5>
-                <a href = "https://open.spotify.com/artist/6kXp61QMZFPcKMcRPqoiVj" class = "btn btn-dark">Artist's Page</a>
-            </div>
-        </div>
-        <div class = "card">
-            <img src = "https://i.scdn.co/image/ab6761610000f178a91b1b17434138adf2ad7981" class = "card-img-top" alt = "#">
-            <div class = "card-body">
-                <h5 class = "card-title">The Verve Pipe</h5>
-                <a href = "https://open.spotify.com/artist/242iqFnwNhlidVBMI9GYKp" class = "btn btn-dark">Artist's Page</a>
-            </div>
-        </div>
-    </div>
-    <br></br>
-    <br></br>
-    <br></br>
-    <br></br>
-    <br></br>
-    <br></br>
-    <br></br>
-    <br></br>
-      <!-- Visualization Container -->
-  <div id="visualization"></div>
-  <div id="bar"></div> 
-  <!-- Container for the charts -->
-    <div class="chart-container">
-    <!-- Chart 1 -->
-    <div id="chart1" class="chart"></div>
-    <!-- Chart 2 -->
-    <div id="chart2" class="chart"></div>
-    <!-- Chart 3 -->
-    <div id="chart3" class="chart"></div>
-    <!-- Chart 4 -->
-    <div id="chart4" class="chart"></div>
-  </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap JS and jQuery (required for Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Include the JavaScript file -->
     <script src="app.js"></script>
-    <script src="tables_data.json" type="module"></script> <!-- Import the data.js file -->
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
