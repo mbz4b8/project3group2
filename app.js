@@ -2,7 +2,7 @@
 //const Spotifydata = 'tables_data.json';
 
 // Read in the Spotify SQLite data from tables_json.json file
-const Spotifydata = 'https://raw.githubusercontent.com/mbz4b8/project3group2/main/tables_data.json';
+const Spotifydata = 'tables_data.json';
 
 // Fetch data and process it
 fetch(Spotifydata)
