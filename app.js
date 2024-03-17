@@ -10,3 +10,26 @@ fetch(Spotifydata)
   .catch(error => {
     console.error('Error fetching data:', error);
   });
+
+// Recently Played Chart
+  // Bar chart data
+  let barData = [{
+    x: recentlyPlayed.rplTrackArtist,
+    y: recentlyPlayed.rplTrackPopularity,
+    type: 'bar',
+    text: recentlyPlayed.rplTrackName
+  }];
+
+  // Bar chart layout
+  let barLayout = {
+    title: 'Spotify Artists Recently Played',
+    xaxis: {
+      title: 'Artist Name'
+    yaxis: {
+      title: 'Spotify Track Popularity'
+    }
+    }
+  };
+
+  // Plot the bar chart
+  Plotly.newPlot("bar", barData, barLayout);
