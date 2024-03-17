@@ -12,7 +12,7 @@ fetch(Spotifydata)
   });
 
 // Assuming recentlyPlayed data is in data.recentlyPlayed
-const recentlyPlayed = data.recentlyPlayed;
+recentlyPlayed = data.recentlyPlayed;
 
 // Bar chart data
 let barData = [{
