@@ -48,5 +48,5 @@ We had to make sure that we abided by Spotify's Data Privacy Laws, which include
    
 ## Link to Project Dashboard:
 
-https://mbz4b8.github.io/Project3-FINAL/
+[https://mbz4b8.github.io/Project3-FINAL/](https://mbz4b8.github.io/project3group2/)https://mbz4b8.github.io/project3group2/
 
