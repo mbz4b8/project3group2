@@ -15,22 +15,22 @@ One of the key takeaways here was to make an interface that tells the story we a
 By clicking the link below, you will be guided to one of our member's Spotify Wrapped information, where you will see interactive graphs relating to their most recently played songs, top songs played (by timeframes), top artists (by time frames), and related artists that coincide with their top artists. 
 Going into further detail - 
 1. Graphs
-   • All of the graphs shown are interactive! As a user, we wanted to see what our most recent data shows us.
-   • Our first graph ("Songs Recently Played") shows, in real time, what songs were listened to compared to the Spotify Popularity.
-   • The second graph created was "Top Songs Played" - we were able to show top songs played by the user over three different time frames using a dropdown:
+   - All of the graphs shown are interactive! As a user, we wanted to see what our most recent data shows us.
+   - Our first graph ("Songs Recently Played") shows, in real time, what songs were listened to compared to the Spotify Popularity.
+   - The second graph created was "Top Songs Played" - we were able to show top songs played by the user over three different time frames using a dropdown:
        1. All Time
        2. Last 6 months
        3. Last 4 Weeks
-   • The third graph shows "Top Artists" using the same time frames as the one above.
-2. At the bottom, we created a dropdown that takes the user's Top Artists and displays 5 related artists, along with their picture and Spotify page link.
-3. Lastly, we made sure to use Spotify's color scheme in our dashboard. The colors the Spotify uses can be found in the link inlcuded under "Ethical Considerations" below.
+    - The third graph shows "Top Artists" using the same time frames as the one above.
+    - At the bottom, we created a dropdown that takes the user's Top Artists and displays 5 related artists, along with their picture and Spotify page link.
+    - Lastly, we made sure to use Spotify's color scheme in our dashboard. The colors the Spotify uses can be found in the link inlcuded under "Ethical Considerations" below.
 
 
 ## Ethical Considerations
 
 While creating this dashboard, we had to keep in mind that we were working with Spotify's data, artists' pictures and information, as well as our user's Spotify profile data.
 For Spotify, we needed to use their logo appropriately. This included size, color, background color of the dashboard so that the logo looked the best, make sure the logo wasn't distorted in any way, etc. The documentation for these guidelines can be found here: 
-    • https://developer.spotify.com/documentation/design
+- https://developer.spotify.com/documentation/design
 We had to make sure that we abided by Spotify's Data Privacy Laws, which includes access to data via an API required consent from the user's profile, so that we could use our javascript code included in the user's authorization to gain permission. Included in this is that the data storage in the database incldued the design to keep user name (PII) separate from listener data in order ot protect user privacy.The last piece considered was the artist's intellectual property.Spotify’s business model includes negotiations with artists on how their names, likeness, and music are shared in platform and by apps using Spotify services. Our dashboard was designed to adhere to artist guidelines for song names, artist names, artist images (required to be displayed without alteration, filters or overlays), etc. 
 
 
