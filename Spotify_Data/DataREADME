@@ -15,6 +15,7 @@ Extract the Spotify user data from the API using the files in the "newPublic" fo
  - Download JSON files after running HTML files and store in folder Data_to_SQL/json_downloads
 - Top Tracks data by Short Term, Long Term, and Medium Term time frames
 - Download JSON files after running HTML files and store in folder Data_to_SQL/json_downloads
+- Utilize Node.js and Express.js to to handle authentication & proxy requests to the Spotify API
 
 Run file "Import Spotify API data to SQL" in Jupyter notebook
 Import dependencies Pandas and json
@@ -26,5 +27,21 @@ Import dependencies of sqlite3, csv and json
 Connect to SQLite database and create a new table for each .csv file created in previous step
 Follow instructions for creating tables and loading data in Jupyter notebook file
 Finally, export Spotify.db, tables and data into json file "tables_data.json". 
+
+In main root of repository directory:
+- copy "tables_data.json" file into root directory as it will load data called by HTML and javascript of Spotify dashboard. 
+- Created "app.js" file that reads in "tables_data.json" file and build code for four different visualization modules of Spotify dashboard. 
+1. Songs Recently Played, which utilizes Recently Played data
+2. Top Songs Played, which utlizizes combinedTopTracks data. Include build for a drop-down menu 
+that will filter chart to change data visualization based on time frame selections ("All Time" represents "Long Term" time frame, 
+"Last 4 weeks" represents "Short Term" time frame and "Last 6 months" represents "Medium Term" time frame). 
+3. Top Artists, which utlizizes combinedTopArtists data. Include build for a drop-down menu 
+that will filter chart to change data visualization based on time frame selections ("All Time" represents "Long Term" time frame, 
+"Last 4 weeks" represents "Short Term" time frame and "Last 6 months" represents "Medium Term" time frame). 
+4. Top Artists Dropdown, which utilizes "combinedTopArtists" data. Visulaization allows for users to select one of their "Top Artists" from 
+Spotify data and the chart will change to show five related artists that are similiar to the selected Top Artist. 
+- Create index.html file to render Spotify dashboard
+- Dependecies include Plotly for chart visualizations, bootstrap for CSS. 
+- Include custom javascript file "app.js" in body of HTML to load the data and visualizations. 
 
 
