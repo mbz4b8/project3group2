@@ -1,1 +1,22 @@
 Data Pull README
+
+To pull data from Spotify API, follow the below process. 
+
+Access Spotify Web Developer API
+Log into Spotify developer dashboard with your Spotify account. 
+Create an app and select "Web API" for the type of API you want to create. Once the app is created, you will have access to app credentials 
+that are required for API authorization to obtain an access token. 
+Log your Client ID and Client Secret Success key for later use. 
+
+Extract the Spotify user data from the API using the files in the "newPublic" folder, which consists of the below:
+- Recently Played tracks and artist data, via the "AppTracks" files
+- Download JSON files after running HTML files and store in folder Data_to_SQL/json_downloads
+- Top Artists data by Short Term, Long Term and Medium Term time frames
+ - Download JSON files after running HTML files and store in folder Data_to_SQL/json_downloads
+- Top Tracks data by Short Term, Long Term, and Medium Term time frames
+- Download JSON files after running HTML files and store in folder Data_to_SQL/json_downloads
+
+Run file "Import Spotify API data to SQL" in Jupyter notebook
+Import dependencies Pandas and json
+Follow instructions in Jupter notebook to create transform data into .csv files to load into the SQLite database
+- .csv files will be stored in in "SQLLite/csv" folder 
