@@ -37,7 +37,7 @@ This README provides a comprehensive guide on how to pull data from the Spotify 
   - Connect to the SQLite database and create a new table for each[.csv file](https://github.com/mbz4b8/project3group2/tree/main/Spotify_Data/Data_to_SQL/SQLite/csv) created in the previous step.
   - Follow instructions for creating tables and loading data in the Jupyter notebook file.
   - Export Spotify.db's tables and data into a JSON file named [tables_data.json](https://github.com/mbz4b8/project3group2/blob/main/Spotify_Data/Data_to_SQL/SQLite/tables_data.json).
-- For reference and defintions of Spotify data in SQLite database and final json file, review the [Spotify API Data Dictionary.](https://github.com/mbz4b8/project3group2/blob/main/Spotify_Data/Data_to_SQL/SQLite/Spotify%20API%20Data%20Dictionary.xlsx)
+- For reference and defintions of Spotify data in SQLite database and final json file, review the [Spotify API Data Dictionary.](https://github.com/mbz4b8/project3group2/blob/main/Spotify_Data/Data_to_SQL/SQLite/Spotify%20API%20Data%20Dictionary.md)
 
 ## Dashboard Creation:
 - Copy the "tables_data.json" file into the [root directory](https://github.com/mbz4b8/project3group2/tree/main).
