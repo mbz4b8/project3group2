@@ -1,4 +1,4 @@
-###combinedTopArtists
+### combinedTopArtists Table
 | Field                  | Definition   
 | -----------------------| ---------------------------------------------------------------------------------------------------------------------------
 | username               | name of user from which spotify data is collected
