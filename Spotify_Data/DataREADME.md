@@ -27,24 +27,25 @@ This README provides a comprehensive guide on how to pull data from the Spotify 
       - Final json files downloaded from HTML were copied into [json_downloads folder](https://github.com/mbz4b8/project3group2/tree/main/Spotify_Data/Data_to_SQL/json_downloads)
 
 ## Data Transformation and Storage:
-- Run the "Import Spotify API data to SQL" file in Jupyter notebook.
+- Run the [Import Spotify API data to SQL](https://github.com/mbz4b8/project3group2/blob/main/Spotify_Data/Data_to_SQL/Import%20Spotify%20API%20data%20to%20SQL.ipynb) file in Jupyter notebook.
   - Import dependencies like Pandas and JSON.
+  - Read in the json files downloaded from Spotify API and stored in [json_downloads folder](https://github.com/mbz4b8/project3group2/tree/main/Spotify_Data/Data_to_SQL/json_downloads)
   - Follow instructions in the Jupyter notebook to transform data into .csv files to load into the SQLite database.
-  - Store .csv files in the "SQLite/csv" folder.
-- Run the "SQLite_Database_Creation" file in Jupyter notebook to create a "Spotify.db" file containing Spotify API data.
+  - Store .csv files in the [SQLite/csv folder.](https://github.com/mbz4b8/project3group2/tree/main/Spotify_Data/Data_to_SQL/SQLite/csv)
+- Run the [SQLite_Database_Creation](https://github.com/mbz4b8/project3group2/blob/main/Spotify_Data/Data_to_SQL/SQLite/SQLite_Database_Creation.ipynb) file in Jupyter notebook to create a "Spotify.db" file containing Spotify API data.
   - Import dependencies of sqlite3, CSV, and JSON.
-  - Connect to the SQLite database and create a new table for each .csv file created in the previous step.
+  - Connect to the SQLite database and create a new table for each[.csv file](https://github.com/mbz4b8/project3group2/tree/main/Spotify_Data/Data_to_SQL/SQLite/csv) created in the previous step.
   - Follow instructions for creating tables and loading data in the Jupyter notebook file.
-  - Export Spotify.db's tables and data into a JSON file named "tables_data.json".
+  - Export Spotify.db's tables and data into a JSON file named [tables_data.json](https://github.com/mbz4b8/project3group2/blob/main/Spotify_Data/Data_to_SQL/SQLite/tables_data.json).
 
 ## Dashboard Creation:
-- Copy the "tables_data.json" file into the root directory.
-- Create an "app.js" file that reads the "tables_data.json" file and builds code for four different visualization modules of the Spotify dashboard:
+- Copy the "tables_data.json" file into the [root directory](https://github.com/mbz4b8/project3group2/tree/main).
+- Create an [app.js file](https://github.com/mbz4b8/project3group2/blob/main/app.js) that reads the [tables_data.json file](https://github.com/mbz4b8/project3group2/blob/main/tables_data.json) and builds code for four different visualization modules of the Spotify dashboard:
   - Songs Recently Played
   - Top Songs Played with a drop-down menu for time frame selection
   - Top Artists with a drop-down menu for time frame selection
   - Top Artists Dropdown allowing users to select a top artist and see related artists
-- Create an "index.html" file to render the Spotify dashboard.
+- Create an [index.html file](https://github.com/mbz4b8/project3group2/blob/main/index.html) to render the Spotify dashboard.
   - Include dependencies like Plotly for chart visualizations and Bootstrap for CSS.
   - Include the custom JavaScript file "app.js" in the body of HTML to load the data and visualizations.
 - Utilize GitHub pages to host the "index.html" file and render the dashboard.
