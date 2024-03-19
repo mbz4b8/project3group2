@@ -63,3 +63,32 @@
 | rplTrackURI| Spotify url for Track
 | username| name of user from which spotify data is collected
 
+### combinedRelatedArtists Table
+| Field                  | Definition   
+| -----------------------| ---------------------------------------------------------------------------------------------------------------------------
+| tTrackImages| Blank, ignore this
+| tArtistsexternalurls| URL to go to Related Artist page within Spotify
+| tArtistsFollowers| Related Artists Followers
+| tArtistsid| Spotify id for Related Artist
+| tArtistsname| Related Artist Name
+| tArtistspopularity| Related Artists Popularity
+| tArtistsuri| Related Artist Spotify URI
+| tGenre| Related Artists Genre of music
+| tArtistsTime| Short to indicate top track in last 4 weeks. Medium to indicate top track in last 6 months. Long to indicate top track for all time"
+| topArtistName| Name of Top Artist that Related Artists is simliar to
+| tArtistimage1_height| image height of large Artist image size
+| tArtistimage1_url| image url of large Artist image size
+| tArtistimage1_width| image width of large Artist image size
+| tArtistimage2_height| image height of medium Artist image size
+| tArtistimage2_url| image url of medium Artist image size
+| tArtistimage2_width| image width of medium Artist image size
+| tArtistimage3_height| image height of small Artist image size
+| tArtistimage3_url| image url of small Artist image size
+| tArtistimage3_width| image width of small Artist image size
+| tArtistimage4_height| image 4 height
+| tArtistimage4_url| image 4 urls
+| tArtistimage4_width| image 4 width
+| username| name of user from which spotify data is collected
+
+
+
