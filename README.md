@@ -29,9 +29,9 @@ Going into further detail -
 ## Ethical Considerations
 
 While creating this dashboard, we had to keep in mind that we were working with Spotify's data, artists' pictures and information, as well as our user's Spotify profile data.
-For Spotify, we needed to use their logo appropriately. This included size, color, background color of the dashboard so that the logo looked the best, make sure the logo wasn't distorted in any way, etc. The documentation for these guidelines can be found here: 
-- https://developer.spotify.com/documentation/design
-We had to make sure that we abided by Spotify's Data Privacy Laws, which includes access to data via an API required consent from the user's profile, so that we could use our javascript code included in the user's authorization to gain permission. Included in this is that the data storage in the database incldued the design to keep user name (PII) separate from listener data in order ot protect user privacy.The last piece considered was the artist's intellectual property.Spotify’s business model includes negotiations with artists on how their names, likeness, and music are shared in platform and by apps using Spotify services. Our dashboard was designed to adhere to artist guidelines for song names, artist names, artist images (required to be displayed without alteration, filters or overlays), etc. 
+- For Spotify, we needed to use their logo appropriately. This included size, color, background color of the dashboard so that the logo looked the best, make sure the logo wasn't distorted in any way, etc. The documentation for these guidelines can be found [here](https://developer.spotify.com/documentation/design) 
+- We had to make sure that we abided by Spotify's Data Privacy Laws, which includes access to data via an API required consent from the user's profile, so that we could use our javascript code included in the user's authorization to gain permission. Included in this is that the data storage in the database incldued the design to keep user name (PII) separate from listener data in order ot protect user privacy.
+- The last piece considered was the artist's intellectual property. Spotify’s business model includes negotiations with artists on how their names, likeness, and music are shared in platform and by apps using Spotify services. Our dashboard was designed to adhere to artist guidelines for song names, artist names, artist images (required to be displayed without alteration, filters or overlays), etc. 
 
 
 ## Data Sources:
