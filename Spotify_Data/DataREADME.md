@@ -8,11 +8,19 @@ This README provides a comprehensive guide on how to pull data from the Spotify 
 - Once the app is created, obtain the app credentials (Client ID and Client Secret) required for API authorization to obtain an access token.
 
 ## Extract Spotify User Data:
-- Utilize files in the "newPublic" folder, which includes:
-  - Recently Played tracks and artist data via the "AppTracks" files.
-  - Top Artists data by Short Term, Long Term, and Medium Term time frames.
-  - Top Tracks data by Short Term, Long Term, and Medium Term time frames.
-  - Utilize Node.js and Express.js to handle authentication and proxy requests to the Spotify API.
+- Due to Spotify API's rate limits, multiple Spotify Apps were created to minimimize API calls to allow for all data be pulled for the creation of a Spotify SQLite database. For each of the below Spotify Apps, a html page was developed along with custom javascript to access the Spotify listener data by user profile id and then provide a link to download the data via a json file. Node.js and Express.js were used to faciliate accessing the Spotify API and downloading the data. A list of apps and their corresponding files is below:
+  - AppTracks: pulled "Recently Played" and "Top Tracks" data from Spotify API
+    - Files located in [here](https://github.com/mbz4b8/project3group2/tree/main/Spotify_Data/Data_to_SQL/newPublic) labeled:
+      - "AppTracksindex.html", "AppTracksscript.js", "AppTracksserver.js"
+  - AppShortTermArtist: pulled "Top Artists Short Term" data from Spotify API
+    - Files located in [here](https://github.com/mbz4b8/project3group2/tree/main/Spotify_Data/Data_to_SQL/newPublic) labeled:
+      - "AppShortindex.html", "AppShortscript.js", "AppShortserver.js"
+- AppMediumTermArtist: pulled "Top Artists Medium Term" data from Spotify API
+    - Files located in [here](https://github.com/mbz4b8/project3group2/tree/main/Spotify_Data/Data_to_SQL/newPublic) labeled:
+      - "AppMedAindex.html", "AppMedAscript.js", "AppMedAserver.js"
+- AppLongTermArtist: pulled "Top Artists Long Term" data from Spotify API
+    - Files located in [here](https://github.com/mbz4b8/project3group2/tree/main/Spotify_Data/Data_to_SQL/newPublic) labeled:
+      - "AppLongAindex.html", "AppLongAscript.js", "AppLongAserver.js"
 
 ## Data Transformation and Storage:
 - Run the "Import Spotify API data to SQL" file in Jupyter notebook.
