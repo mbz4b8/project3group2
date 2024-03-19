@@ -19,4 +19,12 @@ Extract the Spotify user data from the API using the files in the "newPublic" fo
 Run file "Import Spotify API data to SQL" in Jupyter notebook
 Import dependencies Pandas and json
 Follow instructions in Jupter notebook to create transform data into .csv files to load into the SQLite database
-- .csv files will be stored in in "SQLLite/csv" folder 
+- .csv files will be stored in in "SQLite/csv" folder 
+
+Run file "SQLite_Database_Creation" in Jupyter notebook to create "Spotify.db" file containing Spotify API data
+Import dependencies of sqlite3, csv and json
+Connect to SQLite database and create a new table for each .csv file created in previous step
+Follow instructions for creating tables and loading data in Jupyter notebook file
+Finally, export Spotify.db, tables and data into json file "tables_data.json". 
+
+
