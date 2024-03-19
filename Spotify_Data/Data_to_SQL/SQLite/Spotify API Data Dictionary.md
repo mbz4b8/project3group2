@@ -1,6 +1,7 @@
 ###combinedTopArtists
-| Field                  | Definition       
-| username| name of user from which spotify data is collected
+| Field                  | Definition   
+| -----------------------| ---------------------------------------------------------------------------------------------------------------------------
+| username               | name of user from which spotify data is collected
 | tTrackImages| Blank, ignore this
 | tArtistimage1_height| image height of large Artist image size
 | tArtistimage1_url| image url of large Artist image size
