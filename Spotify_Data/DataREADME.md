@@ -12,15 +12,19 @@ This README provides a comprehensive guide on how to pull data from the Spotify 
   - AppTracks: pulled "Recently Played" and "Top Tracks" data from Spotify API
     - Files located in [newPublic Folder](https://github.com/mbz4b8/project3group2/tree/main/Spotify_Data/Data_to_SQL/newPublic) labeled:
       - "AppTracksindex.html", "AppTracksscript.js", "AppTracksserver.js"
+      - Final json files downloaded from HTML were copied into [json_downloads folder](https://github.com/mbz4b8/project3group2/tree/main/Spotify_Data/Data_to_SQL/json_downloads)
   - AppShortTermArtist: pulled "Top Artists Short Term" data from Spotify API
     - Files located in [newPublic Folder](https://github.com/mbz4b8/project3group2/tree/main/Spotify_Data/Data_to_SQL/newPublic) labeled:
       - "AppShortindex.html", "AppShortscript.js", "AppShortserver.js"
+      - Final json files downloaded from HTML were copied into [json_downloads folder](https://github.com/mbz4b8/project3group2/tree/main/Spotify_Data/Data_to_SQL/json_downloads)
     - AppMediumTermArtist: pulled "Top Artists Medium Term" data from Spotify API
       - Files located in [newPublic Folder](https://github.com/mbz4b8/project3group2/tree/main/Spotify_Data/Data_to_SQL/newPublic) labeled:
       - "AppMedAindex.html", "AppMedAscript.js", "AppMedAserver.js"
+      - Final json files downloaded from HTML were copied into [json_downloads folder](https://github.com/mbz4b8/project3group2/tree/main/Spotify_Data/Data_to_SQL/json_downloads)
     - AppLongTermArtist: pulled "Top Artists Long Term" data from Spotify API
       - Files located in [newPublic Folder](https://github.com/mbz4b8/project3group2/tree/main/Spotify_Data/Data_to_SQL/newPublic) labeled:
       - "AppLongAindex.html", "AppLongAscript.js", "AppLongAserver.js"
+      - Final json files downloaded from HTML were copied into [json_downloads folder](https://github.com/mbz4b8/project3group2/tree/main/Spotify_Data/Data_to_SQL/json_downloads)
 
 ## Data Transformation and Storage:
 - Run the "Import Spotify API data to SQL" file in Jupyter notebook.
