@@ -37,6 +37,16 @@ This README provides a comprehensive guide on how to pull data from the Spotify 
 - Include the custom JavaScript file "app.js" in the body of HTML to load the data and visualizations.
 
 
+## Dashboard Creation:
+- Copy the "tables_data.json" file into the root directory.
+- Create an "app.js" file that reads the "tables_data.json" file and builds code for four different visualization modules of the Spotify dashboard:
+  - Songs Recently Played
+  - Top Songs Played with a drop-down menu for time frame selection
+  - Top Artists with a drop-down menu for time frame selection
+  - Top Artists Dropdown allowing users to select a top artist and see related artists
+- Create an "index.html" file to render the Spotify dashboard.
+- Include dependencies like Plotly for chart visualizations and Bootstrap for CSS.
+- Include the custom JavaScript file "app.js" in the body of HTML to load the data and visualizations.
 
 
 
