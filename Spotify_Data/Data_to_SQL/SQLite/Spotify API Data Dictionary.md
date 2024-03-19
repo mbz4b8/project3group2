@@ -20,6 +20,4 @@
 | tArtistspopularity| The popularity of the artist. The value will be between 0 and 100, with 100 being the most popular. The artist's popularity is calculated from the popularity of all the artist's tracks.
 | tArtiststype| Type of record (Artist, track, playlist, etc)
 | tArtistsuri| Spotify uri for Artist
-| tArtistsTime| Short to indicate top artist in last 4 weeks
-Medium to indicate topartist in last 6 months
-Long to indicate top artist for all time
+| tArtistsTime| Short to indicate top artist in last 4 weeks. Medium to indicate topartist in last 6 months. Long to indicate top artist for all time.
